@@ -378,7 +378,7 @@ function drawGraph(graph) {
       html = `
         <strong>${a.name}</strong><br>
         ${a.role ? `<div><span style='color: #4C4646;'>${a.role}</span></div>` : ''}
-        ${a.photo ? (()=>{const src=normalizeDriveUrl(a.photo); return `<img src=\"${src}\" alt=\"photo\" onerror=\"this.style.display='none'\">`; })() : ''}
+        ${a.photo ? `<img src="${a.photo}" alt="photo">` : ''}
         ${(a.country || a.city) ? `<div><span style='color: #6A50FF;'>${a.country}${a.city ? ', ' + a.city : ''}</span></div>` : ''}
         ${a.lab ? `<div><span style='color: var(--popup-text);'>lab:</span> <span style='color: #6A50FF;'>${a.lab}</span></div>` : ''}
         ${a.department ? `<div><span style='color: var(--popup-text);'>department:</span> <span style='color: #4C4646;'>${a.department}</span></div>` : ''}
